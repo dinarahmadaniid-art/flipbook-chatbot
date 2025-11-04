@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot RotiBott</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Mengatur tata letak agar chatbot memenuhi seluruh jendela pop-up */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; /* Mencegah scroll yang tidak perlu */
+            height: 100vh; 
+            width: 100vw; 
+            font-family: Arial, sans-serif;
+        }
+        /* Menyesuaikan tampilan Dialogflow Messenger */
+        df-messenger { 
+            --df-messenger-bot-message: #008080; /* Warna gelembung pesan bot */
+            --df-messenger-button-title: #ffffff; /* Warna teks tombol */
+            --df-messenger-font-color: #000000;
+            --df-messenger-chat-background-color: #f7f7f7;
+            --df-messenger-header-title-color: #ffffff;
+            --df-messenger-header-background-color: #009688; /* Warna header */
+            height: 100%; /* Penting: agar sesuai dengan ukuran jendela pop-up */
+            width: 100%;  /* Penting: agar sesuai dengan ukuran jendela pop-up */
+            display: flex; /* Memastikan tata letak yang fleksibel */
+        }
+    </style>
+</head>
+<body>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="RotiBott"
+      agent-id="49b48333-533f-443b-855b-b2a0074b5fd6"
+      language-code="id"
+    ></df-messenger>
+
+</body>
+</html>
