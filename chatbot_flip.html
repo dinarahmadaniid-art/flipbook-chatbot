@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chatbot Loader - Iframe</title>
+    <title>Chatbot Loader - Messenger Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { margin: 0; padding: 0; overflow: hidden; height: 100vh; width: 100vw; }
-        iframe { width: 100%; height: 100%; border: none; }
+        /* CSS untuk memastikan widget mengisi penuh jendela */
+        html, body { 
+            margin: 0; padding: 0; overflow: hidden; height: 100%; width: 100%; 
+        }
+        df-messenger { 
+            height: 100%; width: 100%; display: flex;
+            --df-messenger-header-background-color: #009688; 
+            --df-messenger-header-title-color: #ffffff; 
+        }
     </style>
 </head>
 <body>
-    <iframe 
-        src="https://console.dialogflow.com/api-client/demo/embedded/49b48333-533f-443b-855b-b2a0074b5fd6" 
-        referrerpolicy="no-referrer"
-        allow="cross-origin"
-    ></iframe>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="chatbotrm"
+      agent-id="49b48333-533f-443b-855b-b2a0074b5fd6"
+      language-code="id"
+    ></df-messenger>
+
 </body>
 </html>
 
